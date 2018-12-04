@@ -13,6 +13,15 @@ $(document).ready(function() {
             }
         });
     });
+
+    $("#logout").click(function() {
+        $("#login_page").addClass("open");
+        $("#dashboard_page").removeClass("open");
+        setTimeout(function() {
+            $("#results").empty();
+            $("#dashboard_page").removeClass("searched");
+        }, 400);
+    });
 });
 
 function generateResult(alias) {
