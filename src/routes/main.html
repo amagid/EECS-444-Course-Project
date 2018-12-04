@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="/js"></script>
     </head>
     <body>
@@ -11,20 +12,20 @@
             </div>
         </div>
         <div class="content">
-            <div class="login page open">
+            <div class="login page open" id="login_page">
                 <div class="login_background">
                     <h3 class="login_label">Login</h3>
                     <input class="text_entry" type="text" id="username" placeholder="Username"/>
                     <input class="text_entry" type="password" id="password" placeholder="Password"/>
-                    <button class="submit_button">Login</button>
+                    <button class="submit_button" id="login_button">Login</button>
                 </div>
             </div>
-            <div class="dashboard page">
+            <div class="dashboard page" id="dashboard_page">
                 <div class="searchbox">
                     <div class="content">
                         <h3 class="search_title">Search Aliases By City</h3>
                         <input class="text_entry" type="text" id="city" placeholder="City"/>
-                        <button class="submit_button" type="submit">Search!</button>
+                        <button class="submit_button" type="submit" id="search_button">Search!</button>
                     </div>
                 </div>
                 <div class="resultbox">

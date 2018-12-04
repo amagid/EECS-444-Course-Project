@@ -162,6 +162,11 @@ button.submit_button {
     padding: 20px;
     transition: opacity 0.4s ease 0.4s;
     width: 50%;
+    height: 100%;
+}
+
+.resultbox h3 {
+    text-align: center;
 }
 
 .searched .resultbox {
@@ -173,9 +178,6 @@ button.submit_button {
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
-    margin-top: 40px;
-    overflow: auto;
-    height: calc(100% - 100px);
 }
 
 .resultbox .results .result {
