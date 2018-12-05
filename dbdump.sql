@@ -37,7 +37,10 @@ CREATE TABLE `aliases` (
 
 LOCK TABLES `aliases` WRITE;
 /*!40000 ALTER TABLE `aliases` DISABLE KEYS */;
-INSERT INTO `aliases` VALUES (1,'John Smith',1,'cleveland');
+INSERT INTO `aliases` VALUES (1,'John Smith',1,'cleveland'), (2,'Karen Jones',6,'cleveland'), 
+(3,'Alex Wong',9,'cleveland'),(4,'Noah Webber',3,'cleveland'), (5,'Erin Daniels',2,'cleveland'), (6,'Joanne Moore',1,'berkeley'),
+(7,'Katie King',4,'berkeley'), (8,'Michael Scott',8,'berkeley'), (9,'Jeremy Long',10,'berkeley'), (10,'Marissa Raso',5,'berkeley'),
+(11,'Walter White',7,'atlanta'), (12,'Mark Allman',1,'atlanta'), (13,'Adam Pascal',8,'atlanta'), (14,'Mary Kate',2,'atlanta'), (15,'Andy Dwyer',4,'atlanta');
 /*!40000 ALTER TABLE `aliases` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -49,6 +52,7 @@ DROP TABLE IF EXISTS `creditcards`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `creditcards` (
+ `userid` int references users(id),
   `number` varchar(16) NOT NULL,
   `cvv` varchar(3) DEFAULT NULL,
   `expmonth` varchar(2) DEFAULT NULL,
@@ -64,7 +68,10 @@ CREATE TABLE `creditcards` (
 
 LOCK TABLES `creditcards` WRITE;
 /*!40000 ALTER TABLE `creditcards` DISABLE KEYS */;
-INSERT INTO `creditcards` VALUES ('2472492385463824','823','02','30','91347');
+INSERT INTO `creditcards` VALUES (1,'2472492385463824','823','02','30','44106'),(1,'1234567812345678','789','12','20','44106'),
+(1,'1457632896547891','565','06','25','94707'),(1,'0912348743652345','091','05','22','64783'),(1,'8726348596431287','529','01','22','09765'),
+(1,'7638654723459812','619','09','21','17829'),(1,'7648329812560987','789','06','21','91910'),(1,'6387601934758329','104','08','20','61525'),
+(1,'1234098765438907','761','10','26','61514'),(1,'6574983290874532','001','11','28','40156');
 /*!40000 ALTER TABLE `creditcards` ENABLE KEYS */;
 UNLOCK TABLES;
 
