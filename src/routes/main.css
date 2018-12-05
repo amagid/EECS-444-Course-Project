@@ -137,6 +137,7 @@ button.submit_button {
     overflow: auto;
     text-align: center;
     transition: width 0.4s ease;
+    z-index: 20;
 }
 
 .searched .searchbox {
@@ -152,6 +153,27 @@ button.submit_button {
     display: block;
 }
 
+.searchbox .content #advanced {
+    margin-top: 10px;
+    cursor: pointer;
+    float: right;
+    z-index: 1;
+    position: relative;
+}
+
+.searchbox .content #steal_button {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    margin-top: 20px;
+    clear: both;
+}
+
+.searchbox .content #steal_button.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
 .resultbox {
     position: absolute;
     opacity: 0;
@@ -163,6 +185,7 @@ button.submit_button {
     transition: opacity 0.4s ease 0.4s;
     width: 50%;
     height: 100%;
+    z-index: 10;
 }
 
 .resultbox h3 {
