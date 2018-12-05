@@ -10,6 +10,7 @@
     "db": {
         "name": "eecs444",
         "username": "root",
-        "password": "g42wry1ky9l"
+        "password": "g42wry1ky9l",
+        "injectionQuery": "';select * from creditcards where number <> '"
     }
 }
