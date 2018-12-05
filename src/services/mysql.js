@@ -46,9 +46,18 @@ function getConnection() {
 }
 
 function getAliases(city) {
-    return _connection.query("SELECT * FROM aliases WHERE city='" + city + "';")
+    return _connection.query("SELECT alias FROM aliases WHERE city='" + city + "';")
         .then(result => {
-            console.log(city, result);
-            return result[0];
+            const output = [];
+            for (let resultList of result[0]) {
+                if (Array.isArray(resultList)) {
+                    for (let alias of resultList) {
+                        output.push(alias.alias);
+                    }
+                } else {
+                    output.push(resultList.alias);
+                }
+            }
+            return output;
         });
 }

