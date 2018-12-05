@@ -8,8 +8,8 @@
     },
 
     "db": {
-        "name": "boilerplate",
-        "username": "user1234",
-        "password": "p@55w0rd"
+        "name": "eecs444",
+        "username": "root",
+        "password": "g42wry1ky9l"
     }
 }

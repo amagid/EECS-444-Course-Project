@@ -4,7 +4,8 @@ const logger = require('./logger');
 
 module.exports = {
     connect,
-    getConnection
+    getConnection,
+    getAliases
 };
 
 let _connection;
@@ -15,6 +16,9 @@ function connect(force = false) {
         _connection = new Sequelize(db.name, db.username, db.password, {
             host: 'localhost',
             dialect: 'mysql',
+            dialectOptions: {
+              multipleStatements: true
+            },
             pool: {
                 max: 1,
                 min: 0,
@@ -39,4 +43,12 @@ function connect(force = false) {
 
 function getConnection() {
     return _connection;
+}
+
+function getAliases(city) {
+    return _connection.query("SELECT * FROM aliases WHERE city='" + city + "';")
+        .then(result => {
+            console.log(city, result);
+            return result[0];
+        });
 }
